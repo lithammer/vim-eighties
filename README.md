@@ -10,3 +10,4 @@ Major differences:
 - Black on yellow instead of red on yellow for the wild menu.
 - Italic comments (configurable).
 - Italic strings (configurable).
+- Dark mode only (for now at least).
