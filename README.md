@@ -1,4 +1,4 @@
-# Eighties - Vim Colour Scheme
+# Eighties - Vim Color Scheme
 
 A port of the [base16-eighties](https://github.com/chriskempson/base16-vim)
 theme using [Colortemplate](https://github.com/lifepillar/vim-colortemplate)

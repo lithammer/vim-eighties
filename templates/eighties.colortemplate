@@ -8,7 +8,7 @@ Author:        Chris Kempson
 # Optional
 Maintainer:    Peter Lithammer <peter.lithammer@gmail.com>
 Website:       https://github.com/lithammer/vim-eighties
-Description:   Dark color scheme with eighties pastel colours
+Description:   Dark color scheme with eighties pastel colors
 License:       MIT
 Option Prefix: eighties
 Neovim:        yes
