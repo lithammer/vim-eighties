@@ -1,9 +1,9 @@
 *eighties.txt*	For Vim version 8.0	Last change: 2019 Jul 02
 
 
-		  eighties color scheme    by Chris
+		Eighties color scheme
 
-eighties, a color scheme with a unique touch.
+Eighties, a color scheme with a unique touch.
 
 ==============================================================================
 Color scheme options					eighties-options*
@@ -32,3 +32,4 @@ Set to 0 if you do not want strings in italics.
 <
 
  vim:tw=78:ts=8:noet:ft=help:norl:
+
