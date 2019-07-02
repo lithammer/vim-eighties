@@ -1,0 +1,34 @@
+*eighties.txt*	For Vim version 8.0	Last change: 2019 Jul 02
+
+
+		  eighties color scheme    by Chris
+
+eighties, a color scheme with a unique touch.
+
+==============================================================================
+Color scheme options					eighties-options*
+
+						*g:eighties_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+	let g:eighties_transp_bg = 0
+<
+
+						*g:eighties_italics*
+Set to 0 if you do not want to enable italics. Note that the color scheme in
+normal circumstances automatically detects whether italics is available. You
+should never need to set this option explicitly. You may want to unset it if
+you do not want Vim to display italics even when the feature is available
+(e.g., in GUI versions of Vim).
+>
+	let g:eighties_italics = 1
+<
+
+						*g:eighties_italicize_strings*
+Set to 0 if you do not want strings in italics.
+>
+	let g:eighties_italicize_strings = 1
+<
+
+ vim:tw=78:ts=8:noet:ft=help:norl:

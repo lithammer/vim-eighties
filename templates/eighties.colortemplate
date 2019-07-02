@@ -1,0 +1,342 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58
+
+# Information {{{
+# Mandatory
+Full name:     eighties
+Short name:    eighties
+Author:        Chris Kempson
+# Optional
+Maintainer:    Peter Lithammer <peter.lithammer@gmail.com>
+Website:       https://github.com/lithammer/vim-eighties
+Description:   Dark color scheme with eighties pastel colours
+License:       MIT
+Option Prefix: eighties
+Neovim:        yes
+# }}}
+
+# Documentation {{{
+Include: _help.colortemplate
+# }}}
+
+#let s:italics = s:italics && get(g:, '@optionprefix_italics', 1)
+
+# Common linked groups {{{
+# QuickFixLine         -> Search
+StatusLineTerm       -> StatusLine
+StatusLineTermNC     -> StatusLineNC
+Boolean              -> Constant
+# Character            -> Constant
+# Conditional          -> Statement
+# Define               -> PreProc
+# Debug                -> Special
+# Delimiter            -> Special
+Exception            -> Statement
+Float                -> Constant
+# Function             -> Identifier
+# Include              -> PreProc
+# Keyword              -> Statement
+# Label                -> Statement
+# Macro                -> PreProc
+Number               -> Constant
+# Operator             -> Statement
+PreCondit            -> PreProc
+# Repeat               -> Statement
+# SpecialChar          -> Special
+SpecialComment       -> Special
+StorageClass         -> Type
+# String               -> Constant
+# Structure            -> Type
+Substitute           -> Search
+# Tag                  -> Special
+Typedef              -> Type
+# See `:help lCursor`
+lCursor              -> Cursor
+# }}}
+
+Background: dark
+
+# Color palette {{{
+
+# base16-eighties reference table:
+# s:gui00 "2d2d2d" black
+# s:gui01 "393939" darkgrey?
+# s:gui02 "515151" grey?
+# s:gui03 "747369" brightblack
+# s:gui04 "a09f93" brightgrey?
+# s:gui05 "d3d0c8" white
+# s:gui06 "e8e6df" (unused)
+# s:gui07 "f2f0ec" brightwhite
+# s:gui08 "f2777a" brightred
+# s:gui09 "f99157" orange?
+# s:gui0A "ffcc66" brightyellow
+# s:gui0B "99cc99" brightgreen
+# s:gui0C "66cccc" brightcyan
+# s:gui0D "6699cc" brightblue
+# s:gui0E "cc99cc" brightmagenta
+# s:gui0F "d27b53" darkorange?
+
+# Color name                GUI                  Base256    Base16 (optional)
+Color: black                #2d2d2d                0        Black
+Color: red                  #f2777a                1        Red
+Color: green                #99cc99                2        Green
+Color: yellow               #ffcc66                3        Yellow
+Color: blue                 #6699cc                4        Blue
+Color: magenta              #cc99cc                5        Magenta
+Color: cyan                 #66cccc                6        Cyan
+Color: white                #d3d0c8                7        LightGrey
+Color: brightblack          #747369                8        Grey
+Color: brightred            #f2777a                9        LightRed
+Color: brightgreen          #99cc99                10       LightGreen
+Color: brightyellow         #ffcc66                11       LightYellow
+Color: brightblue           #6699cc                12       LightBlue
+Color: brightmagenta        #cc99cc                13       LightMagenta
+Color: brightcyan           #66cccc                14       LightCyan
+# You may use hexadecimal values, too, and you may provide an explicit base-256 color:
+Color: brightwhite          #f2f0ec                15       White
+
+Color: orange               #f99157                16       DarkYellow
+Color: darkorange           #d27b53                17       DarkYellow
+Color: darkgrey             #393939                18       DarkGrey
+Color: grey                 #515151                19       Grey
+Color: brightgrey           #a09f93                20       LightGrey
+# }}}
+
+# Terminal colors {{{
+Term colors: black red green yellow blue magenta cyan white
+Term colors: brightblack brightred brightgreen brightyellow
+Term colors: brightblue brightmagenta brightcyan brightwhite
+# }}}
+
+# Default highlight groups {{{
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256 16 8
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256 16 8
+    Normal           white             none
+    Terminal         white             none
+#else
+    Normal           white             black
+    Terminal         white             black
+#endif
+
+# Group              Foreground        Background        Attributes
+ColorColumn          none              darkgrey
+Conceal              blue              black
+Cursor               black             white
+CursorColumn         none              darkgrey
+CursorLine           none              darkgrey
+CursorLineNr         brightgrey        darkgrey          bold
+Debug                red               none
+DiffAdd              green             darkgrey
+DiffChange           brightblack       darkgrey
+DiffDelete           red               darkgrey          bold
+DiffText             blue              darkgrey          bold
+Directory            blue              none
+EndOfBuffer          white             black
+ErrorMsg             red               black
+FoldColumn           cyan              darkgrey
+Folded               brightblack       darkgrey
+Function             blue              none
+IncSearch            darkgrey          orange
+LineNr               brightblack       darkgrey
+Macro                red               none
+MatchParen           none              brightblack
+ModeMsg              green             none              bold
+MoreMsg              green             none
+NonText              brightblack       none              bold
+Pmenu                white             darkgrey
+# PmenuSbar            none              grey
+PmenuSel             darkgrey          white
+# PmenuThumb           none              brightwhite
+verbatim
+highlight PmenuSbar ctermbg=248 guibg=Grey
+highlight PmenuThumb ctermbg=15 guibg=White
+endverbatim
+Question             blue              none              bold
+QuickFixLine         none              darkgrey
+Search               darkgrey          yellow
+SignColumn           brightblack       darkgrey
+SpecialKey           brightblack       none
+SpellBad             none              none              undercurl guisp=red
+SpellCap             none              none              undercurl guisp=blue
+SpellLocal           none              none              undercurl guisp=magenta
+SpellRare            none              none              undercurl guisp=cyan
+StatusLine           brightgrey        grey
+StatusLineNC         brightblack       darkgrey
+TabLine              brightblack       darkgrey
+TabLineFill          brightblack       darkgrey
+TabLineSel           green             darkgrey
+TooLong              red               none
+Title                blue              none
+VertSplit            grey              none
+Visual               none              grey
+VisualNOS            red               none
+WarningMsg           red               none
+WildMenu             black             yellow
+# Other conventional group names (see `:help group-name`)
+Character            red               none
+Comment              brightblack       none              italic
+Conditional          magenta           none
+Constant             orange            none
+Define               magenta           none
+Delimiter            darkorange        none
+Error                black             red
+Identifier           red               none
+Ignore               white             none
+Include              blue              none
+Keyword              magenta           none
+Label                yellow            none
+Operator             white             none
+PreProc              yellow            none
+Repeat               yellow            none
+Special              cyan              none
+SpecialChar          darkorange        none
+Statement            red               none
+String               green             none              italic
+Structure            magenta           none
+Tag                  yellow            none
+Todo                 yellow            darkgrey
+Type                 yellow            none
+Underlined           red               none              underline
+# See `:help CursorIM`
+# CursorIM             none              fg
+# See `:help window-toolbar`
+# ToolbarLine          none              white
+# ToolbarButton        white             black             bold
+# }}}
+
+# Italics {{{
+verbatim
+if !get(g:, '@optionprefix_italicize_strings', 1)
+  hi String gui=NONE cterm=NONE
+endif
+endverbatim
+# }}}
+
+# Additional highlight groups {{{
+# Add additional highlight groups here if you want
+ALEErrorSign         red               darkgrey
+ALEWarningSign       orange            darkgrey
+ALEInfoSign          cyan              darkgrey
+ALEVirtualTextError        brightblack none
+ALEVirtualTextInfo         brightblack none
+ALEVirtualTextStyleError   brightblack none
+ALEVirtualTextStyleWarning brightblack none
+ALEVirtualTextWarning      brightblack none
+
+cOperator            cyan              none
+cPreCondit           magenta           none
+
+csAttribute             yellow         none
+csClass                 yellow         none
+csContextualStatement   magenta        none
+csModifier              magenta        none
+csNewDecleration        red            none
+csType                  red            none
+csUnspecifiedStatement  blue           none
+
+cssBraces            white             none
+cssClassName         magenta           none
+cssColor             cyan              none
+
+diffAdded            green             black
+diffFile             red               black
+diffNewFile          green             black
+diffLine             blue              black
+diffRemoved          red               black
+
+gitcommitBranch         orange         none              bold
+gitcommitComment        brightblack    none
+gitcommitDiscarded      brightblack    none
+gitcommitDiscardedFile  red            none              bold
+gitcommitDiscardedType  blue           none
+gitcommitHeader         magenta        none
+gitcommitOverflow       red            none
+gitcommitSelected       brightblack    none
+gitcommitSelectedFile   green          none              bold
+gitcommitSelectedType   blue           none
+gitcommitSummary        green          none
+gitcommitUnmergedFile   red            none              bold
+gitcommitUnmergedType   blue           none
+gitcommitUntracked      brightblack    none
+gitcommitUntrackedFile  yellow         none
+
+GitGutterAdd           green           darkgrey
+GitGutterChange        blue            darkgrey
+GitGutterDelete        red             darkgrey
+GitGutterChangeDelete  magenta         darkgrey
+
+htmlBold             yellow            none
+htmlEndTag           white             none
+htmlItalic           magenta           none
+htmlTag              white             none
+
+javaOperator         blue              none
+
+javaScript           white             none
+javaScriptBraces     white             none
+javaScriptNumber     orange            none
+jsBuiltins           yellow            none
+jsClassDefinition    yellow            none
+jsClassFuncName      blue              none
+jsClassMethodType    magenta           none
+jsExceptions         yellow            none
+jsFuncCall           blue              none
+jsFuncName           blue              none
+jsFunction           magenta           none
+jsGlobalNodeObjects  yellow            none
+jsGlobalObjects      yellow            none
+jsOperator           blue              none
+jsRegexpString       cyan              none
+jsReturn             magenta           none
+jsStatement          magenta           none
+jsThis               red               none
+
+markdownCode              green        none
+markdownCodeBlock         green        none
+markdownError             white        black
+markdownHeadingDelimiter  blue         none
+
+phpComparison        white             none
+phpMemberSelector    white             none
+phpMethodsVar        cyan              none
+phpParent            white             none
+
+pythonInclude        magenta           none
+pythonOperator       magenta           none
+pythonRepeat         magenta           none
+pythonStatement      magenta           none
+
+rubyAttribute               blue        none
+rubyConstant                yellow      none
+rubyInterpolationDelimiter  darkorange  none
+rubyRegexp                  cyan        none
+rubyStringDelimiter         green       none
+rubySymbol                  green       none
+
+sassClassChar        orange            none
+sassInclude          magenta           none
+sassMixinName        blue              none
+sassMixing           magenta           none
+sassidChar           red               none
+
+SignifySignAdd       green             darkgrey
+SignifySignChange    blue              darkgrey
+SignifySignDelete    red               darkgrey
+
+StartifyBracket      brightblack       none
+StartifyFile         brightwhite       none
+StartifyFooter       brightblack       none
+StartifyHeader       green             none
+StartifyNumber       orange            none
+StartifyPath         brightblack       none
+StartifySection      magenta           none
+StartifySelect       cyan              none
+StartifySlash        brightblack       none
+StartifySpecial      brightblack       none
+# }}}
+
+# B/W variant {{{
+Include: _bw.colortemplate
+# }}}
