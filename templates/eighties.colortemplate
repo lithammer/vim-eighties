@@ -91,7 +91,6 @@ Color: brightyellow         #ffcc66                11       LightYellow
 Color: brightblue           #6699cc                12       LightBlue
 Color: brightmagenta        #cc99cc                13       LightMagenta
 Color: brightcyan           #66cccc                14       LightCyan
-# You may use hexadecimal values, too, and you may provide an explicit base-256 color:
 Color: brightwhite          #f2f0ec                15       White
 
 Color: orange               #f99157                16       DarkYellow
@@ -99,6 +98,9 @@ Color: darkorange           #d27b53                17       DarkYellow
 Color: darkgrey             #393939                18       DarkGrey
 Color: grey                 #515151                19       Grey
 Color: brightgrey           #a09f93                20       LightGrey
+
+Color: lightblue            #87d7ff                117      LightBlue
+Color: pink                 #ffafd7                218      Magenta
 # }}}
 
 # Terminal colors {{{
@@ -320,6 +322,20 @@ sassInclude          magenta           none
 sassMixinName        blue              none
 sassMixing           magenta           none
 sassidChar           red               none
+
+semshiAttribute        cyan            none
+semshiBuiltin          magenta         none              bold
+semshiErrorChar        black           red
+semshiErrorSign        red             darkgrey
+semshiFree             pink            none
+semshiGlobal           orange          none
+semshiImported         yellow          none              bold
+semshiLocal            darkorange      none
+semshiParameter        blue            none
+semshiParameterUnused  lightblue       none              underline
+semshiSelected         none            none              undercurl
+semshiSelf             brightgrey      none
+semshiUnresolved       yellow          none              underline
 
 SignifySignAdd       green             darkgrey
 SignifySignChange    blue              darkgrey
