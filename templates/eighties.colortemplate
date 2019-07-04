@@ -323,18 +323,18 @@ sassMixinName        blue              none
 sassMixing           magenta           none
 sassidChar           red               none
 
-semshiAttribute        cyan            none
-semshiBuiltin          magenta         none              bold
+semshiAttribute        white           none
+semshiBuiltin          magenta         none
 semshiErrorChar        black           red
 semshiErrorSign        red             darkgrey
 semshiFree             pink            none
-semshiGlobal           orange          none
-semshiImported         yellow          none              bold
+semshiGlobal           white           none              bold
+semshiImported         yellow          none
 semshiLocal            darkorange      none
-semshiParameter        blue            none
+semshiParameter        cyan            none
 semshiParameterUnused  lightblue       none              underline
 semshiSelected         none            none              undercurl
-semshiSelf             brightgrey      none
+semshiSelf             red             none
 semshiUnresolved       yellow          none              underline
 
 SignifySignAdd       green             darkgrey

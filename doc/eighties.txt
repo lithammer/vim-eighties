@@ -1,4 +1,4 @@
-*eighties.txt*	For Vim version 8.0	Last change: 2019 Jul 02
+*eighties.txt*	For Vim version 8.0	Last change: 2019 Jul 03
 
 
 		Eighties color scheme
