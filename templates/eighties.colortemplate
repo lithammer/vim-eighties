@@ -93,7 +93,7 @@ Color: brightmagenta        #cc99cc                13       LightMagenta
 Color: brightcyan           #66cccc                14       LightCyan
 Color: brightwhite          #f2f0ec                15       White
 
-Color: orange               #f99157                208      DarkYellow
+Color: orange               #f99157                209      DarkYellow
 Color: darkorange           #d27b53                166      DarkYellow
 Color: darkgrey             #393939                237      DarkGrey
 Color: grey                 #515151                239      Grey
