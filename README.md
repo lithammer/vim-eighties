@@ -11,3 +11,7 @@ Major differences:
 - Italic comments (configurable).
 - Italic strings (configurable).
 - Dark mode only (for now at least).
+- Better support for 256 colors<sup>1</sup>.
+
+<sup>1</sup> Requires your shell to be configured with base16-eighties colors,
+e.g. https://github.com/chriskempson/base16-iterm2.
