@@ -15,3 +15,5 @@ Major differences:
 
 <sup>1</sup> Requires your shell to be configured with base16-eighties colors,
 e.g. https://github.com/chriskempson/base16-iterm2.
+
+See https://vimcolors.com/976/eighties/dark for a generated screenshot.
