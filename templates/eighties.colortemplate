@@ -198,7 +198,7 @@ Statement            red               none
 String               green             none              italic
 Structure            magenta           none
 Tag                  yellow            none
-Todo                 yellow            darkgrey
+Todo                 yellow            darkgrey          italic
 Type                 yellow            none
 Underlined           red               none              underline
 # See `:help CursorIM`
