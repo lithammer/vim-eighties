@@ -135,7 +135,11 @@ DiffChange           brightblack       darkgrey
 DiffDelete           red               darkgrey          bold
 DiffText             blue              darkgrey          bold
 Directory            blue              none
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+EndOfBuffer          white             none
+#else
 EndOfBuffer          white             black
+#endif
 ErrorMsg             red               black
 FoldColumn           cyan              darkgrey
 Folded               brightblack       darkgrey
