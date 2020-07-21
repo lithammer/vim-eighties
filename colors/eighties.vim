@@ -75,7 +75,11 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi DiffDelete guifg=#f2777a guibg=#393939 guisp=NONE gui=bold cterm=bold
   hi DiffText guifg=#6699cc guibg=#393939 guisp=NONE gui=bold cterm=bold
   hi Directory guifg=#6699cc guibg=NONE guisp=NONE gui=NONE cterm=NONE
-  hi EndOfBuffer guifg=#d3d0c8 guibg=#2d2d2d guisp=NONE gui=NONE cterm=NONE
+  if get(g:, 'eighties_transp_bg', 0) && !has('gui_running')
+    hi EndOfBuffer guifg=#d3d0c8 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+  else
+    hi EndOfBuffer guifg=#d3d0c8 guibg=#2d2d2d guisp=NONE gui=NONE cterm=NONE
+  endif
   hi ErrorMsg guifg=#f2777a guibg=#2d2d2d guisp=NONE gui=NONE cterm=NONE
   hi FoldColumn guifg=#66cccc guibg=#393939 guisp=NONE gui=NONE cterm=NONE
   hi Folded guifg=#747369 guibg=#393939 guisp=NONE gui=NONE cterm=NONE
@@ -493,7 +497,11 @@ if s:t_Co >= 16
   hi DiffDelete ctermfg=Red ctermbg=DarkGrey cterm=bold
   hi DiffText ctermfg=Blue ctermbg=DarkGrey cterm=bold
   hi Directory ctermfg=Blue ctermbg=NONE cterm=NONE
-  hi EndOfBuffer ctermfg=LightGrey ctermbg=Black cterm=NONE
+  if get(g:, 'eighties_transp_bg', 0)
+    hi EndOfBuffer ctermfg=LightGrey ctermbg=NONE cterm=NONE
+  else
+    hi EndOfBuffer ctermfg=LightGrey ctermbg=Black cterm=NONE
+  endif
   hi ErrorMsg ctermfg=Red ctermbg=Black cterm=NONE
   hi FoldColumn ctermfg=Cyan ctermbg=DarkGrey cterm=NONE
   hi Folded ctermfg=Grey ctermbg=DarkGrey cterm=NONE
@@ -702,7 +710,11 @@ if s:t_Co >= 8
   hi DiffDelete ctermfg=Red ctermbg=DarkGrey cterm=bold
   hi DiffText ctermfg=Blue ctermbg=DarkGrey cterm=bold
   hi Directory ctermfg=Blue ctermbg=NONE cterm=NONE
-  hi EndOfBuffer ctermfg=LightGrey ctermbg=Black cterm=NONE
+  if get(g: 'eighties_transp_bg', 0)
+    hi EndOfBuffer ctermfg=LightGrey ctermbg=NONE cterm=NONE
+  else
+    hi EndOfBuffer ctermfg=LightGrey ctermbg=Black cterm=NONE
+  endif
   hi ErrorMsg ctermfg=Red ctermbg=Black cterm=NONE
   hi FoldColumn ctermfg=Cyan ctermbg=DarkGrey cterm=NONE
   hi Folded ctermfg=Grey ctermbg=DarkGrey cterm=NONE
